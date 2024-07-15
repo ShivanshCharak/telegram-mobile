@@ -1,0 +1,229 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.topbar {
+  width: 380px;
+  height: 46px;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #8673e0;
+  border-radius: 50%;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.avatarUserInfoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  margin-left: 20px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.message {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  word-wrap: break-word;
+  color: #ffffff;
+}
+
+.chatWindow {
+  width: 420px;
+  background-image: url('../assets/1f135a074a169f90e5.jpeg');
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: center; /* Center align messages */
+  margin: 10px;
+}
+
+.messageContainer > .unReadMessages {
+  display: flex;
+  justify-content: center; /* Center align messages */
+  margin: 10px;
+}
+
+.beyondChat .message {
+  background-color: purple;
+}
+
+.otherSender .message {
+  background-color: black;
+}
+
+.beyondChat {
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.otherSender {
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.messageArea {
+  margin-top: 86px; /* Ensure messages start below the pinned message */
+  padding: 20px;
+  width: 100%;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  border-radius: 10%;
+  bottom: 0px;
+  width: 379px;
+  padding: 10px 20px;
+  background-color: #212121;
+}
+
+.userInfo {
+  color: #aaaaaa;
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo > .lastSeen {
+  margin-left: 20px;
+}
+
+.pinnedMessage {
+  width: 380px;
+  background-color: #212121;
+  color: white;
+  border-top: 1px solid #8673e0;
+  border-bottom: 1px solid #8673e0;
+  padding: 10px 20px;
+  position: fixed;
+  top: 66px; /* Adjust position just below the topbar */
+  cursor: pointer;
+  z-index: 900; /* Ensure it stays below the topbar but above the messages */
+}
+
+.pinnedMessage > .heading {
+  border-left: 2px solid #8673e0;
+  color: #8673e0;
+;
+}
+
+.pinnedMessage >.message{
+  margin-top: -10px;
+  margin-bottom: -10px;
+
+}
+.goBack >i{
+  margin-right: 10px;
+}
+
+.inputBox > input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background-color: #212121;
+  color: white;
+}
+
+.inputBox > input:focus {
+  outline: none;
+}
+.avatarUserInfoWrapper > i{
+  margin-right:30px;
+}
+
+.unReadMessages {
+  background-color: #212121;
+  height: 24px;
+  cursor: pointer;
+  text-align: center;
+  width: 110%;
+  color: #8673e0;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin-left: -19px;
+}
+
+.chatMessages {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center align entire chat messages */
+  overflow: hidden;
+}
+
+.mic > i {
+  width: 50px;
+  height: 50px;
+  background-color: #8774e1;
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.options {
+  width: 50px;
+  height: 50px;
+  align-content: center;
+}
+
+.optionsDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #212121;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.optionsDropdown.active {
+  display: block;
+}
+
+.optionItem {
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 12px; /* Increased padding on hover */
+  font-weight: 600;
+}
+
+.optionItem:hover {
+  background-color: rgba(89, 87, 87, 0.2); /* Transparent black */
+}
+
+.optionItem > i {
+  margin-right: 10px;
+}
+
+.delete {
+  color: rgba(231, 7, 7, 0.887);
+}
